@@ -39,7 +39,7 @@ CREATE TABLE `producto` (
   KEY `categoria_producto_id_idx` (`categoria_producto_id`),
   CONSTRAINT `categoria_animal_id` FOREIGN KEY (`categoria_animal_id`) REFERENCES `categoria_animal` (`categoria_animal_id`),
   CONSTRAINT `categoria_producto_id` FOREIGN KEY (`categoria_producto_id`) REFERENCES `categoria_producto` (`categoria_producto_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (2,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(3,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(4,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(5,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(6,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(7,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(8,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0);
+INSERT INTO `producto` VALUES (2,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(3,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(4,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(5,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(6,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(7,1,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(10,2,3,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',28.75,100,'1-1-PAK1-0001','1_1_Alimento.png',0),(11,2,1,'Alimento Perro','DogFood','Paquete 1KG Croquetas sabor pollo',30,50,'1-1-PAK1-0001','2-1-Alimento Perro-DogFood.png',1);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -61,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-29 14:03:41
+-- Dump completed on 2023-04-29 23:54:25

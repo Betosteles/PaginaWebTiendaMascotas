@@ -267,6 +267,26 @@ class Database {
         return $resultado;
     }
 
+    public function getPedidoAllDesc(){
+
+        $stmt = $this->connection->prepare("
+        SELECT *
+        FROM `dbstore`.`pedido`
+        ORDER by id_pedido DESC;
+        ");
+
+
+
+        
+        $stmt->execute(); // ejecutamos la sentecia
+
+        //hacer un fecth de todos los resultados
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $resultado;
+    }
+
+    
 
     public function getPedidoDetalleByPedidoID($pedidoId){
 
@@ -992,8 +1012,8 @@ class Database {
 
         $stmt = $this->connection->prepare("
         SELECT `pedido_estado`.`pedido_id`,
-        `pedido_estado`.`estado_id`,
-        `pedido_estado`.`usuario_id`
+        `pedido_estado`.`estado_id`
+       
         FROM `dbstore`.`pedido_estado`;
         ");
 
@@ -1009,8 +1029,8 @@ class Database {
 
         $stmt = $this->connection->prepare("
         SELECT `pedido_estado`.`pedido_id`,
-        `pedido_estado`.`estado_id`,
-        `pedido_estado`.`usuario_id`
+        `pedido_estado`.`estado_id`
+      
         FROM `dbstore`.`pedido_estado`
         WHERE pedido_id = $id;
         ");
@@ -1058,20 +1078,20 @@ class Database {
         return $resultado;
     }
 
-    public function InsertPedidoEstado($pedido_id,$estado_id,$usuario_id){
+    public function InsertPedidoEstado($pedido_id,$estado_id){
 
         $stmt = $this->connection->prepare("
 
         INSERT INTO `dbstore`.`pedido_estado`
         (`pedido_id`,
-        `estado_id`,
-        `usuario_id`)
+        `estado_id`
+        )
         VALUES
-        (?,?,?);
+        (?,?);
 
         ");
 
-        $params = [$pedido_id,$estado_id,$usuario_id];
+        $params = [$pedido_id,$estado_id];
         $stmt->execute($params); 
     }
 
@@ -1130,14 +1150,13 @@ class Database {
         $stmt->execute(); 
     }
 
-    public function UpdatePedidoEstado($pedido_id,$estado_id,$usuario_id){
+    public function UpdatePedidoEstado($pedido_id,$estado_id,){
 
         $stmt = $this->connection->prepare("
 
         UPDATE `dbstore`.`pedido_estado`
         SET
         `estado_id` = '$estado_id',
-        `usuario_id` = '$usuario_id'
         WHERE  pedido_id = '$pedido_id';
         
 

@@ -7,11 +7,16 @@ $db = new Database();
 switch ($_SERVER['REQUEST_METHOD']){
 
     case 'GET':
-        if($_GET['id']!=0){
+        if($_GET['id']>0){
             echo json_encode( $db->getPedido($_GET['id']));
-        }else{
+        }
+        if($_GET['id']==0){
             echo json_encode( $db->getPedidoAll());
         }
+        if($_GET['id']==-1){
+            echo json_encode( $db->getPedidoAllDesc());
+        }
+
         break;
     case 'POST':
         try{

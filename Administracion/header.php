@@ -9,10 +9,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="administrar_pedidos.php" >Administrar pedidos</a>
+              <a class="nav-link " aria-current="page" href="administrar_pedidos.php" >Administrar pedidos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="administrar_productos.php" >Administrar productos</a>
+              <a class="nav-link active" aria-current="page" href="index.php" >Agregar productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="administrar_productos.php" >Administrar productos</a>
             </li>
           </ul>
         </div>

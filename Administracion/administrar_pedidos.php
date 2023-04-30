@@ -15,8 +15,8 @@
 
   <?php include('header.php'); ?>
 
-  <table class="table">
-  <thead>
+  <table class="table" id="tablaProductos">
+  <thead> 
     <tr>
       <th>ID Pedido</th>
       <th>Fecha</th>
@@ -31,6 +31,6 @@
   </tbody>
 </table>
 
-
+<script src="/Administracion/js/administrar_pedidos.js"></script>
   </body>
 </html>

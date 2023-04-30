@@ -22,13 +22,13 @@ switch ($_SERVER['REQUEST_METHOD']){
 
         $datos = json_decode(file_get_contents('php://input'));
 
-        $db->InsertPedidoEstado($datos->pedido_id,$datos->estado_id,$datos->usuario_id);
+        $db->InsertPedidoEstado($datos->pedido_id,$datos->estado_id);
 
         break;
     case 'PUT':
 
         $datos = json_decode(file_get_contents('php://input'));
-        $db->UpdatePedidoEstado($datos->pedido_id,$datos->estado_id,$datos->usuario_id);
+        $db->UpdatePedidoEstado($datos->pedido_id,$datos->estado_id);
 
         break;
     case 'DELETE':
