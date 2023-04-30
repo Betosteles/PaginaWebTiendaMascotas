@@ -194,16 +194,17 @@ fetch("http://localhost/api/Producto/?id=0")
     console.log(imagenNombre)
 
     fetch('http://localhost/tienda/img/', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.text())
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    method: 'POST',
+    body: formData
+})
+.then(response => response.text())
+.then(data => {
+    console.log(data);
+})
+.catch(error => {
+    console.error('Error:', error);
+});
+
 
       data=  {
         "producto_id": id,

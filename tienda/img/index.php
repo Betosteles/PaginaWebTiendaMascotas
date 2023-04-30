@@ -1,5 +1,6 @@
 <?php
 // Verificamos si se recibió el archivo
+try{
 if(isset($_FILES['imagen'])) {
     // Obtenemos los datos del archivo
     $nombreArchivo = $_FILES['imagen']['name'];
@@ -22,4 +23,8 @@ if(isset($_FILES['imagen'])) {
 } else {
     echo 'No se recibió ningún archivo';
 }
+}catch(PDOException $e){
+    // Manejo del error
+    echo $e->getMessage();
+  }
 ?>

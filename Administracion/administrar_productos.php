@@ -55,10 +55,8 @@
     <label for="categoria" class="form-label">Categoría</label>
     <select class="form-select" id="categoria" name="categoria">
         
-     
     </select>
 </div>
-
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre">
@@ -73,7 +71,7 @@
           </div>
           <div class="mb-3">
             <label for="precio" class="form-label">Precio</label>
-            <input type="number" class="form-control" id="precio" name="precio">
+            <input type="text" class="form-control" id="precio" name="precio">
           </div>
           <div class="mb-3">
             <label for="strock" class="form-label">Stock</label>

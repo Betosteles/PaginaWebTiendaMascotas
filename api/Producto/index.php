@@ -33,6 +33,9 @@ switch ($_SERVER['REQUEST_METHOD']){
 
         break;
     case 'POST':
+
+        try{
+
         $datos = json_decode(file_get_contents('php://input'));
         $db->InsertProductos(
             $datos->categoria_animal_id,
@@ -45,6 +48,10 @@ switch ($_SERVER['REQUEST_METHOD']){
             $datos->codigo_barra,
             $datos->imagenes,
             $datos->garantia);
+        }catch(PDOException $e){
+            // Manejo del error
+            echo $e->getMessage();
+          }
         break;
     case 'PUT':
         $datos = json_decode(file_get_contents('php://input'));
