@@ -1,20 +1,7 @@
 
-<style>
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-  .content {
-    margin-bottom: 80px;
-  }
-</style>
 
-  <footer class=" footer d-flex flex-wrap justify-content-between align-items-center  border-top site-footer bg-dark text-light">
+
+  <footer class=" footer d-flex flex-wrap justify-content-between align-items-center  border-top site-footer mt-auto bg-dark text-light">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
         <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
