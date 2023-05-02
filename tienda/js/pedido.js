@@ -274,7 +274,12 @@ localStorage.setItem("carrito", JSON.stringify(carrito));
 contarCarrito();
 contarCarrito2()
 
+
+
+
 alert("Pedido Realizado!")
+
+location.reload();
 
 }
 

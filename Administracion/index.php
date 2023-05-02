@@ -11,7 +11,7 @@
   </head>
 
 
-  <body id="body">
+  <body class="m-1">
 
   <style> 
 #principal {

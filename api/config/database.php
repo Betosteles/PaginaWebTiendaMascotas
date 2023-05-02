@@ -127,7 +127,7 @@ class Database {
         `cliente`.`tel`,
         `cliente`.`correo`,
         `cliente`.`direccion_envio`,
-        `cliente`.`información_dicional`
+        `cliente`.`informacion_dicional`
         FROM `dbstore`.`cliente` where cliente_id = $id;
         ");
         
@@ -148,7 +148,7 @@ class Database {
         `cliente`.`tel`,
         `cliente`.`correo`,
         `cliente`.`direccion_envio`,
-        `cliente`.`información_dicional`
+        `cliente`.`informacion_dicional`
         FROM `dbstore`.`cliente`;
         ");
         
@@ -169,7 +169,7 @@ class Database {
         `cliente`.`tel`,
         `cliente`.`correo`,
         `cliente`.`direccion_envio`,
-        `cliente`.`información_dicional`
+        `cliente`.`informacion_dicional`
         FROM `dbstore`.`cliente` where nombre = '$Name';
         ");
         
@@ -286,6 +286,35 @@ class Database {
         return $resultado;
     }
 
+
+    public function getPedidoAllDescLimitAndOffset($LIMIT , $OFFSET){
+
+        $stmt = $this->connection->prepare("
+        SELECT * FROM `dbstore`.`pedido` ORDER BY id_pedido DESC LIMIT $LIMIT OFFSET $OFFSET;
+        ");
+        
+        $stmt->execute(); // ejecutamos la sentecia
+
+        //hacer un fecth de todos los resultados
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $resultado;
+    }
+
+
+    public function getPedidoTotal(){
+
+        $stmt = $this->connection->prepare("
+        SELECT COUNT(*) AS total FROM `dbstore`.`pedido`;
+        ");
+        
+        $stmt->execute(); // ejecutamos la sentecia
+
+        //hacer un fecth de todos los resultados
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $resultado;
+    }
     
 
     public function getPedidoDetalleByPedidoID($pedidoId){
@@ -575,7 +604,7 @@ class Database {
             `tel`,
             `correo`,
             `direccion_envio`,
-            `información_dicional`)
+            `informacion_dicional`)
             VALUES
             (?,?,?,?,?,?);
         
@@ -747,7 +776,7 @@ class Database {
         `tel` = '$tel',
         `correo` = '$correo',
         `direccion_envio` = '$direccion_envio',
-        `información_dicional` = '$información_dicional'
+        `informacion_dicional` = '$información_dicional'
         WHERE `cliente_id` = '$id';
         
         ");
@@ -1156,9 +1185,9 @@ class Database {
 
         UPDATE `dbstore`.`pedido_estado`
         SET
-        `estado_id` = '$estado_id',
-        WHERE  pedido_id = '$pedido_id';
-        
+        `estado_id` = $estado_id
+        WHERE `pedido_id` = $pedido_id;
+                
 
         ");
 

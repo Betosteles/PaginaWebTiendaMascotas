@@ -35,7 +35,7 @@ CREATE TABLE `pedido_estado` (
 
 LOCK TABLES `pedido_estado` WRITE;
 /*!40000 ALTER TABLE `pedido_estado` DISABLE KEYS */;
-INSERT INTO `pedido_estado` VALUES (1,1),(26,1),(27,1);
+INSERT INTO `pedido_estado` VALUES (26,1),(27,1),(28,1),(29,1),(30,1),(31,1);
 /*!40000 ALTER TABLE `pedido_estado` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-29 23:54:24
+-- Dump completed on 2023-05-02 16:09:19
