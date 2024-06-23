@@ -5,7 +5,7 @@ class Database {
     //propiedades
     private $host = 'localhost'; // 127.0.0.1
     private $user = 'root';      // no debe ser publciada en repositorios
-    private $password = 'Caligrafia1';  // no debe ser publciada en repositorios
+    private $password = 'password';  // no debe ser publciada en repositorios
     private $database = 'dbstore';
 
     private $connection;
